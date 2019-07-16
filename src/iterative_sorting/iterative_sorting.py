@@ -3,19 +3,6 @@ arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
 
 
 def selection_sort(arr):
-    # looper
-    for i in range(0, len(arr) - 1):
-        smallest_index = i
-        for range_i in range(i, len(arr)):
-            if arr[smallest_index] > arr[range_i]:
-                smallest_index = range_i
-            # The Switcha-roo
-            arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
-
-    return arr
-
-
-def selection_sort(arr):
     # Loop through array
     for i in range(len(arr)):
         # Find the minimum element in remaining unsorted array
@@ -35,6 +22,19 @@ print(selection_sort(arr1))
 # Inital Array: [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
 # Sorted Array: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+
+# What a bubble sorter this one was
+
+
+def bubble_sort(lst):
+    for i in range(len(lst)-1, 0, -1):
+        for index in range(i):
+            if lst[index] > lst[index + 1]:
+                lst[index], lst[index + 1] = lst[index + 1], lst[index]
+    return lst
+
+
+print(bubble_sort(arr1))
 
 # STRETCH: implement the Count Sort function below
 
